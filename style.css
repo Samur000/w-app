@@ -1,0 +1,173 @@
+/* Общие стили */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+	/* Светлый фон */
+	color: #333;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	/* height: 100vh; */
+}
+
+h1 {
+	margin-bottom: 20px;
+	color: #444;
+}
+
+/* Форма поиска */
+#city-form {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 30px;
+}
+
+#city-input {
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	width: 200px;
+	font-size: 14px;
+}
+
+#city-form button {
+	padding: 10px 12px;
+	border: none;
+	border-radius: 5px;
+	background-color: #007BFF;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+
+#city-form button:hover {
+	background-color: #0056b3;
+}
+
+/* Главная прогнозная область */
+.main-forecast {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 80%;
+	padding: 40px;
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	margin: 0 auto;
+}
+
+.today-forecast,
+.other-days-forecast {
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.today-forecast h2 {
+	font-size: 32px;
+	margin-bottom: 20px;
+	color: #444;
+}
+
+.other-days-forecast h2 {
+	font-size: 26px;
+	margin-bottom: 20px;
+	color: #555;
+}
+
+.weather-today {
+	display: flex;
+	justify-content: space-around;
+	gap: 30px;
+	padding: 20px;
+	background-color: #f9f9f9;
+	border-radius: 10px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.03);
+}
+
+.days-container {
+	display: flex;
+	overflow-x: auto;
+	scroll-behavior: smooth;
+	gap: 20px;
+	padding: 30px;
+	border-radius: 20px;
+}
+
+.days-container::-webkit-scrollbar {
+	width: 12px;
+	height: 8px;
+	opacity: 0.85;
+	background-color: rgba(247, 247, 247, 0.85);
+	transition: all 0.3s ease;
+}
+
+.days-container::-webkit-scrollbar-thumb {
+	border-radius: 6px;
+	background-color: rgba(194, 194, 194, 0.75);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25), inset 0 1px 5px rgba(255, 255, 255, 0.05);
+	transition: background-color 0.3s ease;
+}
+
+.days-container::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(150, 150, 150, 0.95);
+	/* Изменение цвета при наведении курсора */
+}
+
+.days-container::-webkit-scrollbar-track {
+	background-clip: padding-box;
+	/* Обрезка фона */
+	border-radius: 4px;
+	/* Скругление краев дорожки */
+	border: 1px solid rgba(50, 50, 50, 0.35);
+	/* Рамка вокруг дорожки */
+}
+
+.day-forecast {
+	flex-shrink: 0;
+	width: 190px;
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.3);
+	/* Матовый белый фон */
+	backdrop-filter: blur(10px);
+	/* Эффект размытия фона */
+	border-radius: 10px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07), inset 0 0 10px rgba(0, 0, 0, 0.02);
+	text-align: center;
+	transition: transform 0.3s ease;
+	/* border: 1px solid #eee; */
+}
+
+.day-forecast:hover {
+	transform: scale(1.025);
+	box-shadow: 0 15px 25px rgba(0, 0, 0, 0.08), inset 0 0 10px rgba(0, 0, 0, 0.04);
+}
+
+.weather-item {
+	margin-bottom: 15px;
+}
+
+.weather-item h4 {
+	font-size: 16px;
+	margin-bottom: 7px;
+	color: #666;
+}
+
+.weather-item p {
+	font-size: 18px;
+	font-weight: bold;
+	color: #222;
+}
+
+.weather-item img {
+	width: 60px;
+	height: auto;
+}
